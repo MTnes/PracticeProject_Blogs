@@ -1,0 +1,68 @@
+<div class="container p-3">
+	<div class="login-wrap">
+		<div class="login-html">
+			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+			<div class="login-form mt-5">
+
+				<form [formGroup]="SignInForm" (ngSubmit)="onSignIn()">
+					<div class="sign-in-htm">
+						<div class="group">
+							<label class="label">Username</label>
+							<input type="text" class="input" formControlName="username">
+						</div>
+						<div class="group">
+							<label class="label">Password</label>
+							<input type="text" class="input" data-type="password" formControlName="password">
+						</div>
+						<div class="py-3"></div>
+						<div class="group">
+							<button type="submit" class="button" [disabled]="!SignInForm.valid">Sign In</button>
+						</div>
+						<!-- <div class="hr"></div>
+						<div class="foot-lnk">
+							<a href="#forgot">Forgot Password?</a>
+						</div> -->
+					</div>
+				</form>
+
+				<form [formGroup]="SignUpForm" (ngSubmit)="onSignUp()">
+					<div class="sign-up-htm">
+						<div class="group">
+							<label for="username" class="label">Username</label>
+							<input id="username" type="text" class="input form-control" formControlName="username">
+						</div>
+						<div class="group">
+							<label for="password" class="label">Password</label>
+							<input id="password" type="password" class="input form-control" data-type="password" formControlName="password">
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="group">
+									<label class="label">First Name</label>
+									<input type="text" class="input form-control" formControlName="first_name">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="group">
+									<label class="label">Last Name</label>
+									<input type="text" class="input form-control" formControlName="last_name">
+								</div>
+							</div>
+						</div>
+						<div class="group">
+							<label class="label">Email Address</label>
+							<input type="email" class="input form-control" formControlName="email">
+						</div>
+						<div class="py-2"></div>
+						<div class="group">
+							<button class="button" type="submit" [disabled]="!SignUpForm.valid">Sign Up</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form class="create-box px-5 py-3" [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+
+          <!-- <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                formControlName="name"
+                id="name">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email Address"
+                formControlName="email"
+                id="email">
+            </div>
+          </div> -->
+
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Blog Heading</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Blog Heading"
+                formControlName="heading"
+                id="blogHeading">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Short Description</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Short Description"
+                formControlName="shortDescription"
+                id="shortDescription">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Content</label>
+              <textarea
+                rows="3"
+                class="form-control"
+                placeholder="Content"
+                formControlName="content"
+                id="content"></textarea>
+            </div>
+          </div>
+
+          <br>
+
+          <div id="success"></div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-sm btn-block" [disabled]="!blogForm.valid">{{ editMode ? 'Change' : 'Create' }}</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <button type="button" class="btn btn-secondary btn-sm btn-block" (click)="onClear()">Clear</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <button type="button" class="btn btn-danger btn-sm btn-block" (click)="onCancel()">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
